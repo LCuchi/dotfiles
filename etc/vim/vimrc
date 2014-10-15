@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 13-Feb-2012.
+" Last Change: 15-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -132,9 +132,13 @@ endif
 NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
 NeoBundle 'Shougo/neocomplcache.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'          " Interactive command execution in Vim.
 NeoBundle 'ujihisa/unite-locate'
-NeoBundle 'h1mesuke/unite-outline'      " outline source for unite.vim
+NeoBundle 'Shougo/unite-outline'        " outline source for unite.vim (fork)
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'ujihisa/unite-font'
+NeoBundle 'tacroe/unite-mark'
 NeoBundle 'violetyk/cake.vim'
 NeoBundle 'tpope/vim-surround'          " surround.vim: quoting/parenthesizing made simple
 NeoBundle 'vimplugin/project.vim'       " Organize/Navigate projects of files (like IDE/buffer explorer) 
