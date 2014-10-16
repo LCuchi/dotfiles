@@ -4,7 +4,7 @@
 既存の .vimrc や .gvimrc が存在する場合は退避しておいてください。
 
     $ cd /path/to/local_git_repository/
-    $ cp -r home ~
+    $ cp -r home/.* ~
 
 NeoBundleでプラグインを導入するため、neobundle.vim と vimproc.vim を予め導入しておきます。
 
