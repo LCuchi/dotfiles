@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 15-Oct-2014.
+" Last Change: 18-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -286,3 +286,25 @@ set formatexpr=autofmt#japanese#formatexpr()
 "endif
 
 " Copyright (C) 2011 KaoriYa/MURAOKA Taro
+
+"---------------------------------------------------------------------------
+" キーマッピング
+
+" Unite.vim を起動する
+nnoremap  [unite]   <Nop>
+nmap      <Space>u  [unite]
+nnoremap  <silent> [unite]s   :<C-u>Unite source<CR>
+nnoremap  <silent> [unite]f   :<C-u>Unite file<CR>
+nnoremap  <silent> [unite]r   :<C-u>Unite file_mru<CR>
+nnoremap  <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap  <silent> [unite]t   :<C-u>Unite tab<CR>
+
+" 括弧の中にカーソルを移動する
+imap {} {}<Left>
+imap [] []<Left>
+imap () ()<Left>
+imap "" ""<Left>
+imap '' ''<Left>
+imap <> <><Left>
+imap // //<left>
+
