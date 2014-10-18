@@ -9,7 +9,7 @@
 NeoBundleでプラグインを導入するため、neobundle.vim と vimproc.vim を予め導入しておきます。
 
     $ cd ~/.vim/bundle
-    $ git clone http://github.com/Shougo/neobundle.vim
+    $ git clone https://github.com/Shougo/neobundle.vim
     $ git clone https://github.com/Shougo/vimproc.vim
 
 
