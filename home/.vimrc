@@ -160,6 +160,8 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'ctrlp.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'einars/js-beautify'
+NeoBundle 'maksimr/vim-jsbeautify'
 
 filetype plugin indent on
 
@@ -290,13 +292,34 @@ set formatexpr=autofmt#japanese#formatexpr()
 
 "---------------------------------------------------------------------------
 " 構文チェック（Syntastic） 
+let g:syntastic_check_on_open = 0 "ファイルを開いたときにチェック
+let g:syntastic_check_on_save = 1 "保存時にチェック
+let g:syntastic_auto_loc_list = 0 "エラーがあったら自動でロケーションリストを開く
+let g:syntastic_loc_list_height = 6 "エラー表示ウィンドウの高さ
+"set statusline+=%#warningmsg# "エラーメッセージの書式
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+let g:syntastic_javascript_checkers = ['jshint'] "jshintを使う
 let g:syntastic_mode_map = {
-  \ 'mode': 'active',
-  \ 'active_filetypes': ['javascript'],
-  \ 'passive_filetypes': ['html']
-  \}
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_javascript_checkers = ['jshint']
+      \ 'mode': 'active',
+      \ 'active_filetypes': ['ruby', 'javascript'],
+      \ 'passive_filetypes': ['html']
+      \ }
+"エラー表示マークを変更
+"let g:syntastic_enable_signs=1
+"let g:syntastic_error_symbol='✗'
+"let g:syntastic_warning_symbol='⚠'
+
+"---------------------------------------------------------------------------
+" vim-jsbeautify
+nnoremap  [jsbeautify]   <Nop>
+nmap      <Space>f  [jsbeautify]
+autocmd FileType javascript nnoremap <buffer>  [jsbeautify] :<C-u>call JsBeautify()<CR>
+autocmd FileType javascript vnoremap <buffer>  [jsbeautify] :<C-u>call RangeJsBeautify()<CR>
+autocmd FileType html nnoremap <buffer> [jsbeautify] :<C-u>call HtmlBeautify()<CR>
+autocmd FileType html vnoremap <buffer> [jsbeautify] :<C-u>call RangeHtmlBeautify()<CR>
+autocmd FileType css nnoremap <buffer> [jsbeautify] :<C-u>call CSSBeautify()<CR>
+autocmd FileType css vnoremap <buffer> [jsbeautify] :<C-u>call RangeCSSBeautify()<CR>
 
 "---------------------------------------------------------------------------
 " キーマッピング
