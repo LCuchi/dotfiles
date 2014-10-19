@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 18-Oct-2014.
+" Last Change: 19-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -159,6 +159,7 @@ NeoBundle 'mattn/unite-advent_calendar'
 NeoBundle 'open-browser.vim'
 NeoBundle 'ctrlp.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on
 
@@ -288,6 +289,16 @@ set formatexpr=autofmt#japanese#formatexpr()
 " Copyright (C) 2011 KaoriYa/MURAOKA Taro
 
 "---------------------------------------------------------------------------
+" 構文チェック（Syntastic） 
+let g:syntastic_mode_map = {
+  \ 'mode': 'active',
+  \ 'active_filetypes': ['javascript'],
+  \ 'passive_filetypes': ['html']
+  \}
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_javascript_checkers = ['jshint']
+
+"---------------------------------------------------------------------------
 " キーマッピング
 
 " Unite.vim を起動する
@@ -298,6 +309,12 @@ nnoremap  <silent> [unite]f   :<C-u>Unite file<CR>
 nnoremap  <silent> [unite]r   :<C-u>Unite file_mru<CR>
 nnoremap  <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap  <silent> [unite]t   :<C-u>Unite tab<CR>
+
+" 構文チェック（Syntastic）を起動する
+nnoremap  [syntastic]   <Nop>
+nmap      <Space>s  [syntastic]
+nnoremap  <silent> [syntastic]c   :<C-u>SyntasticCheck<CR>
+nnoremap  <silent> [syntastic]e   :<C-u>Errors<CR>
 
 " 括弧の中にカーソルを移動する
 imap {} {}<Left>
