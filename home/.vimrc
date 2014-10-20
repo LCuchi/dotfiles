@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 19-Oct-2014.
+" Last Change: 20-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -130,7 +130,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
-NeoBundle 'Shougo/neocomplcache.vim'    " Ultimate auto-completion system for Vim.
+NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'          " Interactive command execution in Vim.
