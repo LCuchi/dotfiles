@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 20-Oct-2014.
+" Last Change: 23-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -231,6 +231,8 @@ set nocursorline
 "
 " バックアップファイルを作成しない (次行の先頭の " を削除すれば有効になる)
 set nobackup
+" swapファイルを作成しない
+set noswapfile
 
 
 "---------------------------------------------------------------------------
@@ -311,6 +313,9 @@ let g:syntastic_mode_map = {
 "let g:syntastic_warning_symbol='⚠'
 
 "---------------------------------------------------------------------------
+" .vimrc を編集する
+nnoremap  <silent><Space>.   :<C-u>tabedit $MYVIMRC<CR>
+
 " vim-jsbeautify
 nnoremap  [jsbeautify]   <Nop>
 nmap      <Space>f  [jsbeautify]
@@ -320,9 +325,6 @@ autocmd FileType html nnoremap <buffer> [jsbeautify] :<C-u>call HtmlBeautify()<C
 autocmd FileType html vnoremap <buffer> [jsbeautify] :<C-u>call RangeHtmlBeautify()<CR>
 autocmd FileType css nnoremap <buffer> [jsbeautify] :<C-u>call CSSBeautify()<CR>
 autocmd FileType css vnoremap <buffer> [jsbeautify] :<C-u>call RangeCSSBeautify()<CR>
-
-"---------------------------------------------------------------------------
-" キーマッピング
 
 " Unite.vim を起動する
 nnoremap  [unite]   <Nop>
