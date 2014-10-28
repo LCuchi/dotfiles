@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 23-Oct-2014.
+" Last Change: 28-Oct-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -130,7 +130,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
-NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
+"NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'          " Interactive command execution in Vim.
@@ -162,6 +162,8 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'tpope/vim-fugitive.vim'
+NeoBundle 'rhysd/committia.vim'
 
 filetype plugin indent on
 
@@ -253,7 +255,8 @@ if has('unix') && !has('gui_running')
   elseif uname =~? "freebsd"
     set term=builtin_cons25
   elseif uname =~? "Darwin"
-    set term=beos-ansi
+    "set term=beos-ansi
+    set term=builtin_xterm
   else
     set term=builtin_xterm
   endif
