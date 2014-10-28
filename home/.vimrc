@@ -126,10 +126,12 @@ filetype plugin indent off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 
-NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
+"NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
 "NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
 NeoBundle 'Shougo/neomru.vim'
@@ -162,8 +164,8 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'tpope/vim-fugitive.vim'
-NeoBundle 'rhysd/committia.vim'
+"NeoBundle 'tpope/vim-fugitive.vim'
+"NeoBundle 'rhysd/committia.vim'
 
 filetype plugin indent on
 
