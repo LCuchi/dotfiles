@@ -164,8 +164,9 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'tpope/vim-fugitive.vim'
+"NeoBundle 'tpope/vim-fugitive.vim'
 NeoBundle 'rhysd/committia.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 filetype plugin indent on
 
