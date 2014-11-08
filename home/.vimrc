@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 28-Oct-2014.
+" Last Change: 04-Nov-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -182,7 +182,7 @@ set smartcase
 " 編集に関する設定:
 "
 " タブの画面上での幅
-set tabstop=4
+set tabstop=2
 " シフト移動幅
 set shiftwidth=4
 " 行頭の余白内でTabを打ち込むと、'shiftwidth'の数だけインデントする
@@ -353,5 +353,5 @@ imap () ()<Left>
 imap "" ""<Left>
 imap '' ''<Left>
 imap <> <><Left>
-imap // //<left>
+"imap // //<left>
 
