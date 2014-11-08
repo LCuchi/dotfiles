@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 04-Nov-2014.
+" Last Change: 08-Nov-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -164,7 +164,7 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'maksimr/vim-jsbeautify'
-"NeoBundle 'tpope/vim-fugitive.vim'
+NeoBundle 'tpope/vim-fugitive.vim'
 NeoBundle 'rhysd/committia.vim'
 NeoBundle 'itchyny/lightline.vim'
 
@@ -185,10 +185,10 @@ set smartcase
 " タブの画面上での幅
 set tabstop=2
 " シフト移動幅
-set shiftwidth=4
+set shiftwidth=2
 " 行頭の余白内でTabを打ち込むと、'shiftwidth'の数だけインデントする
 set smarttab
-" タブをスペースに展開しない (expandtab:展開する)
+" タブをスペースに展開する (noexpandtab:展開しない)
 set expandtab
 " 自動的にインデントする (noautoindent:インデントしない)
 set autoindent
@@ -208,11 +208,11 @@ set textwidth=0
 "---------------------------------------------------------------------------
 " GUI固有ではない画面表示の設定:
 "
-" 行番号を非表示 (number:表示)
+" 行番号を表示する (nonumber:表示しない)
 set number
-" ルーラーを表示 (noruler:非表示)
+" ルーラーを表示する (noruler:表示しない)
 set ruler
-" タブや改行を表示 (list:表示)
+" タブや改行を表示しない (list:表示する)
 set nolist
 " どの文字でタブや改行を表示するかを設定
 "set listchars=tab:>-,extends:<,trail:-,eol:<
@@ -355,4 +355,15 @@ imap "" ""<Left>
 imap '' ''<Left>
 imap <> <><Left>
 "imap // //<left>
+
+"---------------------------------------------------------------------------
+" 2014-11-08
+" 自動的にコメント文字列が挿入されるのをやめる
+" http://d.hatena.ne.jp/hyuki/20140122/vim
+" https://gist.github.com/rbtnn/8540338 （一部修正）
+augroup auto_comment_off
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
+augroup END
 
