@@ -238,6 +238,8 @@ set nocursorline
 set nobackup
 " swapファイルを作成しない
 set noswapfile
+" undoファイルを作成しない (Vim7.4.227以降)
+set noundofile
 
 
 "---------------------------------------------------------------------------
