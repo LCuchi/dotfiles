@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 08-Nov-2014.
+" Last Change: 13-Nov-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -167,6 +167,8 @@ NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'tpope/vim-fugitive.vim'
 NeoBundle 'rhysd/committia.vim'
 NeoBundle 'itchyny/lightline.vim'
+" molokai カラースキーム
+NeoBundle 'tomasr/molokai'
 
 filetype plugin indent on
 
