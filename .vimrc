@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 13-Nov-2014.
+" Last Change: 23-Dec-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -132,7 +132,7 @@ if has('vim_starting')
 endif
 
 "NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
-"NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
+NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'          " Interactive command execution in Vim.
@@ -146,10 +146,17 @@ NeoBundle 'tpope/vim-surround'          " surround.vim: quoting/parenthesizing m
 NeoBundle 'vimplugin/project.vim'       " Organize/Navigate projects of files (like IDE/buffer explorer) 
 NeoBundle 'taglist.vim'
 NeoBundle 'ZenCoding.vim'
-NeoBundle 'ref.vim'
+
+" vim-ref: Integrated reference viewer.
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'mojako/ref-sources.vim'
+NeoBundle 'mustardamus/jqapi'
+NeoBundle 'tokuhirom/jsref'
+let g:ref_jquery_doc_path = $HOME . '/.vim/bundle/jqapi'
+let g:ref_javascript_doc_path = $HOME . '/.vim/bundle/jsref/htdocs'
+
 NeoBundle 'The-NERD-tree'
 NeoBundle 'The-NERD-Commenter'
-NeoBundle 'fugitive.vim'
 NeoBundle 'TwitVim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
@@ -301,6 +308,10 @@ set formatexpr=autofmt#japanese#formatexpr()
 "endif
 
 " Copyright (C) 2011 KaoriYa/MURAOKA Taro
+
+"---------------------------------------------------------------------------
+" 補完（NeoComplete） 
+let g:neocomplete#enable_at_startup = 1 "起動時に有効にする
 
 "---------------------------------------------------------------------------
 " 構文チェック（Syntastic） 
