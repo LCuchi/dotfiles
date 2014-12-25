@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 23-Dec-2014.
+" Last Change: 25-Dec-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -207,6 +207,8 @@ set backspace=2
 set wrapscan
 " 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
 set showmatch
+" 括弧入力時に対応する括弧を表示する時間（0.1sec単位）
+set matchtime=1
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 " テキスト挿入中の自動折り返しを日本語に対応させる
@@ -227,6 +229,8 @@ set nolist
 "set listchars=tab:>-,extends:<,trail:-,eol:<
 " 長い行を折り返して表示 (nowrap:折り返さない)
 set wrap
+" 一行の文字数が多くてもきちんと描画されるようになる
+set display=lastline
 " 常にステータス行を表示 (詳細は:he laststatus)
 set laststatus=2
 " コマンドラインの高さ (Windows用gvim使用時はgvimrcを編集すること)
@@ -312,6 +316,7 @@ set formatexpr=autofmt#japanese#formatexpr()
 "---------------------------------------------------------------------------
 " 補完（NeoComplete） 
 let g:neocomplete#enable_at_startup = 1 "起動時に有効にする
+set pumheight=10 "補完メニューの高さ
 
 "---------------------------------------------------------------------------
 " 構文チェック（Syntastic） 
@@ -370,6 +375,9 @@ imap "" ""<Left>
 imap '' ''<Left>
 imap <> <><Left>
 "imap // //<left>
+
+" 行末までをヤンク
+nnoremap  Y y$
 
 "---------------------------------------------------------------------------
 " 2014-11-08
