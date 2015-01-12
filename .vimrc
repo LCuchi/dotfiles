@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 25-Dec-2014.
+" Last Change: 12-Jan-2015.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -124,6 +124,7 @@ endif
 set nocompatible
 filetype plugin indent off
 
+" neobundle.vim: Ultimate Vim package manager
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
@@ -131,7 +132,6 @@ if has('vim_starting')
   call neobundle#end()
 endif
 
-"NeoBundle 'Shougo/neobundle.vim'        " Ultimate Vim package manager
 NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
 NeoBundle 'Shougo/neomru.vim'
@@ -141,9 +141,9 @@ NeoBundle 'Shougo/unite-outline'        " outline source for unite.vim (fork)
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'ujihisa/unite-font'
 NeoBundle 'tacroe/unite-mark'
-NeoBundle 'violetyk/cake.vim'
+"NeoBundle 'violetyk/cake.vim'
 NeoBundle 'tpope/vim-surround'          " surround.vim: quoting/parenthesizing made simple
-NeoBundle 'vimplugin/project.vim'       " Organize/Navigate projects of files (like IDE/buffer explorer) 
+"NeoBundle 'vimplugin/project.vim'       " Organize/Navigate projects of files (like IDE/buffer explorer) 
 NeoBundle 'taglist.vim'
 NeoBundle 'ZenCoding.vim'
 
@@ -157,11 +157,11 @@ let g:ref_javascript_doc_path = $HOME . '/.vim/bundle/jsref/htdocs'
 
 NeoBundle 'The-NERD-tree'
 NeoBundle 'The-NERD-Commenter'
-NeoBundle 'TwitVim'
+"NeoBundle 'TwitVim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
 NeoBundle 'dbext.vim'
-NeoBundle 'rails.vim'
+"NeoBundle 'rails.vim'
 NeoBundle 'Gist.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/unite-advent_calendar'
