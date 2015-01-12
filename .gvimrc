@@ -3,7 +3,7 @@
 " An example for a Japanese version gvimrc file.
 " 日本語版のデフォルトGUI設定ファイル(gvimrc) - Vim7用試作
 "
-" Last Change: 13-Nov-2014.
+" Last Change: 12-Jan-2015.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -90,7 +90,7 @@ set guifontset=Ricty\ 11
 " キーマッピングに関する設定:
 "
 " MS Windows 風のキーマッピングにする
-:source $VIMRUNTIME/mswin.vim
+":source $VIMRUNTIME/mswin.vim
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
