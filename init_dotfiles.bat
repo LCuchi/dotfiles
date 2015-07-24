@@ -3,7 +3,7 @@
 rem Vimのディレクトリを指定
 set vim_dir="C:\tools\vim"
 rem Githubから持ってきたdotfilesのディレクトリを指定
-set dotfiles_dir="C:\Users\a.uchida@cy\dotfiles"
+set dotfiles_dir="%HOME%\dotfiles"
 
 rem .vimrcと.gvimrcはハードリンク
 fsutil hardlink create "%vim_dir%\_vimrc" "%dotfiles_dir%\.vimrc"
