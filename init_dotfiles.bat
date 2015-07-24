@@ -12,3 +12,5 @@ fsutil hardlink create "%vim_dir%\_gvimrc" "%dotfiles_dir%\.gvimrc"
 rem vimfilesへはシンボリックリンク
 mklink /d %vim_dir%\vimfiles %dotfiles_dir%\vimfiles
 
+rem .atomへはシンボリックリンク
+mklink /d %HOME%\.atom %HOME%\dotfiles\.atom
