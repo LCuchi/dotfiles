@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 12-Jan-2015.
+" Last Change: 24-Jul-2015.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -126,11 +126,9 @@ filetype plugin indent off
 
 " neobundle.vim: Ultimate Vim package manager
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#begin(expand('~/.vim/bundle/'))
+  set runtimepath+=~/dotfiles/vimfiles/bundle/neobundle.vim/
+  call neobundle#begin(expand('~/dotfiles/vimfiles/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
-endif
 
 NeoBundle 'Shougo/neocomplete.vim'    " Ultimate auto-completion system for Vim.
 NeoBundle 'Shougo/unite.vim'            " Unite and create user interfaces
@@ -152,8 +150,8 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'mojako/ref-sources.vim'
 NeoBundle 'mustardamus/jqapi'
 NeoBundle 'tokuhirom/jsref'
-let g:ref_jquery_doc_path = $HOME . '/.vim/bundle/jqapi'
-let g:ref_javascript_doc_path = $HOME . '/.vim/bundle/jsref/htdocs'
+let g:ref_jquery_doc_path = '~/dotfiles/vimfiles/bundle/jqapi'
+let g:ref_javascript_doc_path = '~/dotfiles/vimfiles/bundle/jsref/htdocs'
 
 NeoBundle 'The-NERD-tree'
 NeoBundle 'The-NERD-Commenter'
@@ -176,6 +174,9 @@ NeoBundle 'rhysd/committia.vim'
 NeoBundle 'itchyny/lightline.vim'
 " molokai カラースキーム
 NeoBundle 'tomasr/molokai'
+
+  call neobundle#end()
+endif
 
 filetype plugin indent on
 

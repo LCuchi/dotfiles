@@ -195,8 +195,10 @@ set transparency=20
 "---------------------------------------------------------------------------
 " 起動時に最大化
 if has("gui_running")
-  set fuoptions=maxvert,maxhorz
-  au GUIEnter * set fullscreen
+  if has('mac')
+    set fuoptions=maxvert,maxhorz
+    au GUIEnter * set fullscreen
+  endif
 endif
 
 " Copyright (C) 2011 KaoriYa/MURAOKA Taro
